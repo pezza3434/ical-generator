@@ -293,8 +293,8 @@ class ICalCalendar {
      */
     serve(response, filename) {
         response.writeHead(200, {
-            'Content-Type': 'text/calendar; charset=utf-8',
-            'Content-Disposition': 'attachment; filename="' + (filename || 'calendar.ics') + '"'
+            'content-type': 'text/calendar; charset=utf-8',
+            'content-disposition': 'attachment; filename="' + (filename || 'calendar.ics') + '"'
         });
         response.end(this._generate());
 
